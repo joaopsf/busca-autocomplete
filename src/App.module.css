@@ -1,0 +1,143 @@
+.topo {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(242, 243, 238, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--linha);
+}
+.topoConteudo {
+  width: min(1080px, 100%);
+  margin: 0 auto;
+  padding: 0.7rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 800;
+  font-size: 1.15rem;
+}
+.descricao {
+  font-size: 0.85rem;
+  color: var(--texto-3);
+}
+.comoTestar {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 36px;
+  border: 1px solid var(--linha-forte);
+  background: var(--placa);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.comoTestar:hover {
+  border-color: var(--destaque);
+  color: var(--destaque);
+}
+.comoTestar + .autor {
+  margin-left: 0;
+}
+.autor {
+  margin-left: auto;
+  font-size: 0.8rem;
+  color: var(--texto-3);
+  white-space: nowrap;
+}
+.autor:hover {
+  color: var(--destaque);
+}
+
+.conteudo {
+  width: min(1080px, 100%);
+  margin: 0 auto;
+  padding: 1.25rem 1rem 3rem;
+}
+.grade {
+  display: grid;
+  gap: 1rem;
+  align-items: start;
+}
+.principal {
+  display: grid;
+  gap: 1rem;
+  min-width: 0;
+}
+@media (min-width: 900px) {
+  .grade {
+    grid-template-columns: minmax(0, 1fr) 320px;
+  }
+}
+
+.busca {
+  padding: 1.4rem 1.4rem 1.5rem;
+  /* Acima da linha do tempo, pra lista de sugestões passar por cima dela. */
+  position: relative;
+  z-index: 2;
+}
+.titulo {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.subtitulo {
+  color: var(--texto-2);
+  margin: 0.35rem 0 1.1rem;
+  font-size: 0.95rem;
+}
+.nome {
+  flex: 1;
+  min-width: 0;
+}
+.uf {
+  font: 600 0.75rem/1 var(--mono);
+  color: var(--texto-2);
+  background: #eef0ea;
+  border: 1px solid var(--linha);
+  border-radius: 6px;
+  padding: 0.3rem 0.4rem;
+}
+.capital {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--destaque);
+}
+.escolhida {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  background: var(--destaque-suave);
+  color: var(--destaque-escuro);
+}
+.escolhida .ico,
+.escolhida :global(.ico) {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.escolhida div {
+  display: grid;
+}
+.escolhida span {
+  font: 0.8rem var(--mono);
+  color: var(--texto-2);
+}
+
+@media (max-width: 560px) {
+  .descricao {
+    display: none;
+  }
+  .busca {
+    padding: 1.1rem;
+  }
+}

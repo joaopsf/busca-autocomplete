@@ -1,0 +1,110 @@
+:root {
+  --fundo: #f2f3ee;
+  --placa: #ffffff;
+  --linha: #dde1d8;
+  --linha-forte: #bcc3b6;
+  --texto: #12201a;
+  --texto-2: #3c4842;
+  --texto-3: #5f6a64;
+  --destaque: #0f6b4f;
+  --destaque-escuro: #0a5039;
+  --destaque-suave: #e2f1ea;
+  --marca: #ffe45c;
+  --erro: #b42318;
+  --erro-suave: #fdecea;
+  --aviso: #8a5a00;
+  --aviso-suave: #fff4d6;
+  --sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  --raio: 14px;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 16px/1.5 var(--sans);
+  color: var(--texto);
+  background: var(--fundo);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+}
+:focus-visible {
+  outline: 3px solid var(--destaque);
+  outline-offset: 2px;
+}
+a {
+  color: inherit;
+}
+[hidden] {
+  display: none !important;
+}
+
+.botao {
+  min-height: 44px;
+  padding: 0 1.1rem;
+  border-radius: 10px;
+  border: 1px solid var(--linha-forte);
+  background: var(--placa);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  text-decoration: none;
+}
+.botao:hover {
+  border-color: var(--texto-3);
+}
+.botao.primario {
+  background: var(--destaque);
+  border-color: var(--destaque);
+  color: #fff;
+}
+.botao.primario:hover {
+  background: var(--destaque-escuro);
+}
+.botao:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.botao.pequeno {
+  min-height: 36px;
+  padding: 0 0.75rem;
+  font-size: 0.85rem;
+}
+.ico {
+  width: 1.1em;
+  height: 1.1em;
+  flex: none;
+}
+.placa {
+  background: var(--placa);
+  border: 1px solid var(--linha);
+  border-radius: var(--raio);
+}
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+mark {
+  background: var(--marca);
+  color: inherit;
+  border-radius: 3px;
+  padding: 0 1px;
+}
